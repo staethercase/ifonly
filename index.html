@@ -1,3 +1,11 @@
 <h1>if only you were allowed to use your phone at school...</h1>
 <br><br>
-<a href=""><button>...?</button></a>
+<button id="b">...?</button>
+<script>
+  function gr(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  const button = document.getElementById("b");
+  button.addEventListener("click", function() {
+    document.body.style.backgroundColor = "rgb(" + String(gr(0, 255)) + ", " + String(gr(0, 255)) + ", " + String(gr(0, 255)) + ")"
+</script>
