@@ -1,12 +1,25 @@
+<!DOCTYPE html>
+<html><body>
 <h1>if only you were allowed to use your phone at school...</h1>
 <br><br>
 <button id="b">...?</button>
+<br><br>
 <script>
   function gr(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   const button = document.getElementById("b");
+  var h = 0;
+  var tr = false;
   button.addEventListener("click", function() {
-    document.body.style.backgroundColor = "rgb(" + String(gr(0, 255)) + ", " + String(gr(0, 255)) + ", " + String(gr(0, 255)) + ")"
+    document.body.style.backgroundColor = "rgb(" + String(gr(0, 255)) + ", " + String(gr(0, 255)) + ", " + String(gr(0, 255)) + ")";
+    h = h + 1;
+    if h >= 8 && tr === false {
+      tr = true;
+      var elem = document.createElement("h1");
+      elem.textContent = "you seem to have a lot of free time... why not buy something at the bake sale?";
+      document.body.appendChild(elem);
+    }
   });
 </script>
+</body></html> 
