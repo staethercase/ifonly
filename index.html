@@ -14,7 +14,7 @@
   button.addEventListener("click", function() {
     document.body.style.backgroundColor = "rgb(" + String(gr(0, 255)) + ", " + String(gr(0, 255)) + ", " + String(gr(0, 255)) + ")";
     h = h + 1;
-    if h >= 8 && tr === false {
+    if (h >= 8) && (tr === false) {
       tr = true;
       var elem = document.createElement("h1");
       elem.textContent = "you seem to have a lot of free time... why not buy something at the bake sale?";
